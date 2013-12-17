@@ -1,0 +1,23 @@
+## Source directory
+
+#SUBDIRS = test
+bin_PROGRAMS = EvoFoldV2 grammarTrain dfgEval dfgTrain multinomial
+
+# static linking requires blas and gfortran to be explicitly linked as well:
+# see ./notes.txt for instructions.
+
+#on mac:
+#LDADD = $(top_srcdir)/phy/libphy.la -lboost_program_options-xgcc40-mt -llapack -lntl -lopt -lnewmat -lm
+# on athena:
+#LDADD = $(top_srcdir)/phy/libphy.la -lboost_program_options-gcc41-mt -llapack -lntl -lopt -lnewmat -lm
+# on moma:
+LDADD = $(top_srcdir)/phy/libphy.la -lboost_program_options -llapack -lntl -lopt -lnewmat -lm
+
+EvoFoldV2_SOURCES    = EvoFold.cpp
+grammarTrain_SOURCES = grammarTrain.cpp
+dfgEval_SOURCES      = dfgEval.cpp
+dfgTrain_SOURCES     = dfgTrain.cpp
+multinomial_SOURCES  = multinomial.cpp
+
+#  compiler options
+AM_CPPFLAGS = -I$(top_srcdir)

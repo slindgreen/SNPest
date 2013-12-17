@@ -1,0 +1,90 @@
+#ifndef __SeqIO_h
+#define __SeqIO_h
+
+#include "phy/utils.h"
+#include "phy/ama.h"
+#include <fstream>
+
+
+namespace phy {
+
+  using namespace std;
+
+  // struct for sequential data
+  struct SeqData {
+    
+    string entryId;             // a unique id 
+    vector<string> sequences;   // sequences
+    vector<string> seqNames;    // names of sequences (same order as sequences)
+    vector<string> annotations; // annotation sequences
+    vector<string> annoNames;   // names of annotations (same order as annotation sequences)
+
+    /** Convert all sequences to upper case */
+    void toUpper();
+
+    /** Return length of sequences[0] if it exists and zero otherwise. */
+    unsigned seqSize() const {return (sequences.size() > 0) ? sequences[0].size() : 0;}
+
+    // convenience getters and setters
+    inline void addSeq(string const & name, string const & seq) {seqNames.push_back(name); sequences.push_back(seq);}
+    inline void addAnno(string const & name, string const & anno) {annoNames.push_back(name); annotations.push_back(anno);}
+
+    inline bool hasSeq(string const & name) const {return hasElement(seqNames, name);}
+    inline string const & getSeq(string const & name) const {return sequences[ getIndex(seqNames, name) ];}
+
+    inline bool hasAnno(string const & name) const {return hasElement(annoNames, name);}
+    inline string const & getAnno(string const & name) const {return annotations[ getIndex(annoNames, name) ];}
+  };
+
+
+  /** copy id, sequences, and 'anno' (not 'lAnno') annotation from ama
+      to SeqData. If toUpper is true, then sequences will be converted to
+      upper case. */
+  SeqData amaToSeqData(ama const & a, bool toUpper = true, string const & idFeatureKey = "ENTRY");
+  vector<SeqData> amaToSeqData(vector<ama> const & v, bool toUpper = true, string const & idFeatureKey = "ENTRY");
+
+// 
+//   vector<string> amaToSeqNames(ama const & a)
+//   {
+//     vector<string> seqNames;
+//     for (unsigned i = 0; i < a.sequences.size(); i++)
+//       seqNames.push_back(a.sequences[i].src);
+//     return seqNames;
+//   };
+// 
+// 
+//   vector<string> amaToStrVec(ama const & a)
+//   {
+//     vector<string> obsStrTab;
+//     for (unsigned i = 0; i < a.sequences.size(); i++)
+//       obsStrTab.push_back(a.sequences[i].text);
+//     return obsStrTab;
+//   }
+// 
+// 
+//   vector< vector<string> > amaVecToObsStringTableVec(vector<ama> const & amaVec)
+//   {
+//     vector< vector<string> > obsStrTabVec;
+//     for (unsigned i = 0; i < amaVec.size(); i++)
+//       obsStrTabVec.push_back( amaToStrVec( amaVec[i] ) );
+//     return obsStrTabVec;
+//   }
+// 
+// 
+//   void upperCaseSeqVec(vector<string> & seqVec)
+//   {
+//     for (unsigned i = 0; i < seqVec.size(); i++) {
+//       string & s = seqVec[i];
+//       transform(s.begin(), s.end(), s.begin(), (int(*)(int)) toupper);
+//     }
+//   }
+// 
+
+
+
+
+
+
+} // namespace phy
+
+#endif //  __SeqIO_h

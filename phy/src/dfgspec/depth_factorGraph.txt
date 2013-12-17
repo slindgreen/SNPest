@@ -1,0 +1,9 @@
+NAME:		C.prior
+NB1:		C
+POT:		prior
+
+NAME:		C.G
+NB1:		C
+NB2:		G
+POT:		genotype
+

@@ -1,0 +1,8 @@
+STATE_MAP_NAME:	nucleotideMap
+VAR_NAMES:	C 
+STATE_MAP_NAME:	genotypeMap
+VAR_NAMES:	G
+
+STATE_MAP_NAME:	inputMap
+VAR_NAMES:	
+

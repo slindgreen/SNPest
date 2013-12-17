@@ -1,0 +1,2132 @@
+NAME:		C.prior
+NB1:		C
+POT:		prior
+
+NAME:		C.G
+NB1:		C
+NB2:		G
+POT:		genotype
+
+# Read depth 1
+NAME:		G.A1
+NB1:		G
+NB2:		A1
+POT:		original
+
+NAME:		A1.O1
+NB1:		A1
+NB2:		O1
+POT:		observation
+
+# Read depth 2
+NAME:		G.A2
+NB1:		G
+NB2:		A2
+POT:		original
+
+NAME:		A2.O2
+NB1:		A2
+NB2:		O2
+POT:		observation
+
+# Read depth 3
+NAME:		G.A3
+NB1:		G
+NB2:		A3
+POT:		original
+
+NAME:		A3.O3
+NB1:		A3
+NB2:		O3
+POT:		observation
+
+# Read depth 4
+NAME:		G.A4
+NB1:		G
+NB2:		A4
+POT:		original
+
+NAME:		A4.O4
+NB1:		A4
+NB2:		O4
+POT:		observation
+
+# Read depth 5
+NAME:		G.A5
+NB1:		G
+NB2:		A5
+POT:		original
+
+NAME:		A5.O5
+NB1:		A5
+NB2:		O5
+POT:		observation
+
+# Read depth 6
+NAME:		G.A6
+NB1:		G
+NB2:		A6
+POT:		original
+
+NAME:		A6.O6
+NB1:		A6
+NB2:		O6
+POT:		observation
+
+# Read depth 7
+NAME:		G.A7
+NB1:		G
+NB2:		A7
+POT:		original
+
+NAME:		A7.O7
+NB1:		A7
+NB2:		O7
+POT:		observation
+
+# Read depth 8
+NAME:		G.A8
+NB1:		G
+NB2:		A8
+POT:		original
+
+NAME:		A8.O8
+NB1:		A8
+NB2:		O8
+POT:		observation
+
+# Read depth 9
+NAME:		G.A9
+NB1:		G
+NB2:		A9
+POT:		original
+
+NAME:		A9.O9
+NB1:		A9
+NB2:		O9
+POT:		observation
+
+# Read depth 10
+NAME:		G.A10
+NB1:		G
+NB2:		A10
+POT:		original
+
+NAME:		A10.O10
+NB1:		A10
+NB2:		O10
+POT:		observation
+
+# Read depth 11
+NAME:		G.A11
+NB1:		G
+NB2:		A11
+POT:		original
+
+NAME:		A11.O11
+NB1:		A11
+NB2:		O11
+POT:		observation
+
+# Read depth 12
+NAME:		G.A12
+NB1:		G
+NB2:		A12
+POT:		original
+
+NAME:		A12.O12
+NB1:		A12
+NB2:		O12
+POT:		observation
+
+# Read depth 13
+NAME:		G.A13
+NB1:		G
+NB2:		A13
+POT:		original
+
+NAME:		A13.O13
+NB1:		A13
+NB2:		O13
+POT:		observation
+
+# Read depth 14
+NAME:		G.A14
+NB1:		G
+NB2:		A14
+POT:		original
+
+NAME:		A14.O14
+NB1:		A14
+NB2:		O14
+POT:		observation
+
+# Read depth 15
+NAME:		G.A15
+NB1:		G
+NB2:		A15
+POT:		original
+
+NAME:		A15.O15
+NB1:		A15
+NB2:		O15
+POT:		observation
+
+# Read depth 16
+NAME:		G.A16
+NB1:		G
+NB2:		A16
+POT:		original
+
+NAME:		A16.O16
+NB1:		A16
+NB2:		O16
+POT:		observation
+
+# Read depth 17
+NAME:		G.A17
+NB1:		G
+NB2:		A17
+POT:		original
+
+NAME:		A17.O17
+NB1:		A17
+NB2:		O17
+POT:		observation
+
+# Read depth 18
+NAME:		G.A18
+NB1:		G
+NB2:		A18
+POT:		original
+
+NAME:		A18.O18
+NB1:		A18
+NB2:		O18
+POT:		observation
+
+# Read depth 19
+NAME:		G.A19
+NB1:		G
+NB2:		A19
+POT:		original
+
+NAME:		A19.O19
+NB1:		A19
+NB2:		O19
+POT:		observation
+
+# Read depth 20
+NAME:		G.A20
+NB1:		G
+NB2:		A20
+POT:		original
+
+NAME:		A20.O20
+NB1:		A20
+NB2:		O20
+POT:		observation
+
+# Read depth 21
+NAME:		G.A21
+NB1:		G
+NB2:		A21
+POT:		original
+
+NAME:		A21.O21
+NB1:		A21
+NB2:		O21
+POT:		observation
+
+# Read depth 22
+NAME:		G.A22
+NB1:		G
+NB2:		A22
+POT:		original
+
+NAME:		A22.O22
+NB1:		A22
+NB2:		O22
+POT:		observation
+
+# Read depth 23
+NAME:		G.A23
+NB1:		G
+NB2:		A23
+POT:		original
+
+NAME:		A23.O23
+NB1:		A23
+NB2:		O23
+POT:		observation
+
+# Read depth 24
+NAME:		G.A24
+NB1:		G
+NB2:		A24
+POT:		original
+
+NAME:		A24.O24
+NB1:		A24
+NB2:		O24
+POT:		observation
+
+# Read depth 25
+NAME:		G.A25
+NB1:		G
+NB2:		A25
+POT:		original
+
+NAME:		A25.O25
+NB1:		A25
+NB2:		O25
+POT:		observation
+
+# Read depth 26
+NAME:		G.A26
+NB1:		G
+NB2:		A26
+POT:		original
+
+NAME:		A26.O26
+NB1:		A26
+NB2:		O26
+POT:		observation
+
+# Read depth 27
+NAME:		G.A27
+NB1:		G
+NB2:		A27
+POT:		original
+
+NAME:		A27.O27
+NB1:		A27
+NB2:		O27
+POT:		observation
+
+# Read depth 28
+NAME:		G.A28
+NB1:		G
+NB2:		A28
+POT:		original
+
+NAME:		A28.O28
+NB1:		A28
+NB2:		O28
+POT:		observation
+
+# Read depth 29
+NAME:		G.A29
+NB1:		G
+NB2:		A29
+POT:		original
+
+NAME:		A29.O29
+NB1:		A29
+NB2:		O29
+POT:		observation
+
+# Read depth 30
+NAME:		G.A30
+NB1:		G
+NB2:		A30
+POT:		original
+
+NAME:		A30.O30
+NB1:		A30
+NB2:		O30
+POT:		observation
+
+# Read depth 31
+NAME:		G.A31
+NB1:		G
+NB2:		A31
+POT:		original
+
+NAME:		A31.O31
+NB1:		A31
+NB2:		O31
+POT:		observation
+
+# Read depth 32
+NAME:		G.A32
+NB1:		G
+NB2:		A32
+POT:		original
+
+NAME:		A32.O32
+NB1:		A32
+NB2:		O32
+POT:		observation
+
+# Read depth 33
+NAME:		G.A33
+NB1:		G
+NB2:		A33
+POT:		original
+
+NAME:		A33.O33
+NB1:		A33
+NB2:		O33
+POT:		observation
+
+# Read depth 34
+NAME:		G.A34
+NB1:		G
+NB2:		A34
+POT:		original
+
+NAME:		A34.O34
+NB1:		A34
+NB2:		O34
+POT:		observation
+
+# Read depth 35
+NAME:		G.A35
+NB1:		G
+NB2:		A35
+POT:		original
+
+NAME:		A35.O35
+NB1:		A35
+NB2:		O35
+POT:		observation
+
+# Read depth 36
+NAME:		G.A36
+NB1:		G
+NB2:		A36
+POT:		original
+
+NAME:		A36.O36
+NB1:		A36
+NB2:		O36
+POT:		observation
+
+# Read depth 37
+NAME:		G.A37
+NB1:		G
+NB2:		A37
+POT:		original
+
+NAME:		A37.O37
+NB1:		A37
+NB2:		O37
+POT:		observation
+
+# Read depth 38
+NAME:		G.A38
+NB1:		G
+NB2:		A38
+POT:		original
+
+NAME:		A38.O38
+NB1:		A38
+NB2:		O38
+POT:		observation
+
+# Read depth 39
+NAME:		G.A39
+NB1:		G
+NB2:		A39
+POT:		original
+
+NAME:		A39.O39
+NB1:		A39
+NB2:		O39
+POT:		observation
+
+# Read depth 40
+NAME:		G.A40
+NB1:		G
+NB2:		A40
+POT:		original
+
+NAME:		A40.O40
+NB1:		A40
+NB2:		O40
+POT:		observation
+
+# Read depth 41
+NAME:		G.A41
+NB1:		G
+NB2:		A41
+POT:		original
+
+NAME:		A41.O41
+NB1:		A41
+NB2:		O41
+POT:		observation
+
+# Read depth 42
+NAME:		G.A42
+NB1:		G
+NB2:		A42
+POT:		original
+
+NAME:		A42.O42
+NB1:		A42
+NB2:		O42
+POT:		observation
+
+# Read depth 43
+NAME:		G.A43
+NB1:		G
+NB2:		A43
+POT:		original
+
+NAME:		A43.O43
+NB1:		A43
+NB2:		O43
+POT:		observation
+
+# Read depth 44
+NAME:		G.A44
+NB1:		G
+NB2:		A44
+POT:		original
+
+NAME:		A44.O44
+NB1:		A44
+NB2:		O44
+POT:		observation
+
+# Read depth 45
+NAME:		G.A45
+NB1:		G
+NB2:		A45
+POT:		original
+
+NAME:		A45.O45
+NB1:		A45
+NB2:		O45
+POT:		observation
+
+# Read depth 46
+NAME:		G.A46
+NB1:		G
+NB2:		A46
+POT:		original
+
+NAME:		A46.O46
+NB1:		A46
+NB2:		O46
+POT:		observation
+
+# Read depth 47
+NAME:		G.A47
+NB1:		G
+NB2:		A47
+POT:		original
+
+NAME:		A47.O47
+NB1:		A47
+NB2:		O47
+POT:		observation
+
+# Read depth 48
+NAME:		G.A48
+NB1:		G
+NB2:		A48
+POT:		original
+
+NAME:		A48.O48
+NB1:		A48
+NB2:		O48
+POT:		observation
+
+# Read depth 49
+NAME:		G.A49
+NB1:		G
+NB2:		A49
+POT:		original
+
+NAME:		A49.O49
+NB1:		A49
+NB2:		O49
+POT:		observation
+
+# Read depth 50
+NAME:		G.A50
+NB1:		G
+NB2:		A50
+POT:		original
+
+NAME:		A50.O50
+NB1:		A50
+NB2:		O50
+POT:		observation
+
+# Read depth 51
+NAME:		G.A51
+NB1:		G
+NB2:		A51
+POT:		original
+
+NAME:		A51.O51
+NB1:		A51
+NB2:		O51
+POT:		observation
+
+# Read depth 52
+NAME:		G.A52
+NB1:		G
+NB2:		A52
+POT:		original
+
+NAME:		A52.O52
+NB1:		A52
+NB2:		O52
+POT:		observation
+
+# Read depth 53
+NAME:		G.A53
+NB1:		G
+NB2:		A53
+POT:		original
+
+NAME:		A53.O53
+NB1:		A53
+NB2:		O53
+POT:		observation
+
+# Read depth 54
+NAME:		G.A54
+NB1:		G
+NB2:		A54
+POT:		original
+
+NAME:		A54.O54
+NB1:		A54
+NB2:		O54
+POT:		observation
+
+# Read depth 55
+NAME:		G.A55
+NB1:		G
+NB2:		A55
+POT:		original
+
+NAME:		A55.O55
+NB1:		A55
+NB2:		O55
+POT:		observation
+
+# Read depth 56
+NAME:		G.A56
+NB1:		G
+NB2:		A56
+POT:		original
+
+NAME:		A56.O56
+NB1:		A56
+NB2:		O56
+POT:		observation
+
+# Read depth 57
+NAME:		G.A57
+NB1:		G
+NB2:		A57
+POT:		original
+
+NAME:		A57.O57
+NB1:		A57
+NB2:		O57
+POT:		observation
+
+# Read depth 58
+NAME:		G.A58
+NB1:		G
+NB2:		A58
+POT:		original
+
+NAME:		A58.O58
+NB1:		A58
+NB2:		O58
+POT:		observation
+
+# Read depth 59
+NAME:		G.A59
+NB1:		G
+NB2:		A59
+POT:		original
+
+NAME:		A59.O59
+NB1:		A59
+NB2:		O59
+POT:		observation
+
+# Read depth 60
+NAME:		G.A60
+NB1:		G
+NB2:		A60
+POT:		original
+
+NAME:		A60.O60
+NB1:		A60
+NB2:		O60
+POT:		observation
+
+# Read depth 61
+NAME:		G.A61
+NB1:		G
+NB2:		A61
+POT:		original
+
+NAME:		A61.O61
+NB1:		A61
+NB2:		O61
+POT:		observation
+
+# Read depth 62
+NAME:		G.A62
+NB1:		G
+NB2:		A62
+POT:		original
+
+NAME:		A62.O62
+NB1:		A62
+NB2:		O62
+POT:		observation
+
+# Read depth 63
+NAME:		G.A63
+NB1:		G
+NB2:		A63
+POT:		original
+
+NAME:		A63.O63
+NB1:		A63
+NB2:		O63
+POT:		observation
+
+# Read depth 64
+NAME:		G.A64
+NB1:		G
+NB2:		A64
+POT:		original
+
+NAME:		A64.O64
+NB1:		A64
+NB2:		O64
+POT:		observation
+
+# Read depth 65
+NAME:		G.A65
+NB1:		G
+NB2:		A65
+POT:		original
+
+NAME:		A65.O65
+NB1:		A65
+NB2:		O65
+POT:		observation
+
+# Read depth 66
+NAME:		G.A66
+NB1:		G
+NB2:		A66
+POT:		original
+
+NAME:		A66.O66
+NB1:		A66
+NB2:		O66
+POT:		observation
+
+# Read depth 67
+NAME:		G.A67
+NB1:		G
+NB2:		A67
+POT:		original
+
+NAME:		A67.O67
+NB1:		A67
+NB2:		O67
+POT:		observation
+
+# Read depth 68
+NAME:		G.A68
+NB1:		G
+NB2:		A68
+POT:		original
+
+NAME:		A68.O68
+NB1:		A68
+NB2:		O68
+POT:		observation
+
+# Read depth 69
+NAME:		G.A69
+NB1:		G
+NB2:		A69
+POT:		original
+
+NAME:		A69.O69
+NB1:		A69
+NB2:		O69
+POT:		observation
+
+# Read depth 70
+NAME:		G.A70
+NB1:		G
+NB2:		A70
+POT:		original
+
+NAME:		A70.O70
+NB1:		A70
+NB2:		O70
+POT:		observation
+
+# Read depth 71
+NAME:		G.A71
+NB1:		G
+NB2:		A71
+POT:		original
+
+NAME:		A71.O71
+NB1:		A71
+NB2:		O71
+POT:		observation
+
+# Read depth 72
+NAME:		G.A72
+NB1:		G
+NB2:		A72
+POT:		original
+
+NAME:		A72.O72
+NB1:		A72
+NB2:		O72
+POT:		observation
+
+# Read depth 73
+NAME:		G.A73
+NB1:		G
+NB2:		A73
+POT:		original
+
+NAME:		A73.O73
+NB1:		A73
+NB2:		O73
+POT:		observation
+
+# Read depth 74
+NAME:		G.A74
+NB1:		G
+NB2:		A74
+POT:		original
+
+NAME:		A74.O74
+NB1:		A74
+NB2:		O74
+POT:		observation
+
+# Read depth 75
+NAME:		G.A75
+NB1:		G
+NB2:		A75
+POT:		original
+
+NAME:		A75.O75
+NB1:		A75
+NB2:		O75
+POT:		observation
+
+# Read depth 76
+NAME:		G.A76
+NB1:		G
+NB2:		A76
+POT:		original
+
+NAME:		A76.O76
+NB1:		A76
+NB2:		O76
+POT:		observation
+
+# Read depth 77
+NAME:		G.A77
+NB1:		G
+NB2:		A77
+POT:		original
+
+NAME:		A77.O77
+NB1:		A77
+NB2:		O77
+POT:		observation
+
+# Read depth 78
+NAME:		G.A78
+NB1:		G
+NB2:		A78
+POT:		original
+
+NAME:		A78.O78
+NB1:		A78
+NB2:		O78
+POT:		observation
+
+# Read depth 79
+NAME:		G.A79
+NB1:		G
+NB2:		A79
+POT:		original
+
+NAME:		A79.O79
+NB1:		A79
+NB2:		O79
+POT:		observation
+
+# Read depth 80
+NAME:		G.A80
+NB1:		G
+NB2:		A80
+POT:		original
+
+NAME:		A80.O80
+NB1:		A80
+NB2:		O80
+POT:		observation
+
+# Read depth 81
+NAME:		G.A81
+NB1:		G
+NB2:		A81
+POT:		original
+
+NAME:		A81.O81
+NB1:		A81
+NB2:		O81
+POT:		observation
+
+# Read depth 82
+NAME:		G.A82
+NB1:		G
+NB2:		A82
+POT:		original
+
+NAME:		A82.O82
+NB1:		A82
+NB2:		O82
+POT:		observation
+
+# Read depth 83
+NAME:		G.A83
+NB1:		G
+NB2:		A83
+POT:		original
+
+NAME:		A83.O83
+NB1:		A83
+NB2:		O83
+POT:		observation
+
+# Read depth 84
+NAME:		G.A84
+NB1:		G
+NB2:		A84
+POT:		original
+
+NAME:		A84.O84
+NB1:		A84
+NB2:		O84
+POT:		observation
+
+# Read depth 85
+NAME:		G.A85
+NB1:		G
+NB2:		A85
+POT:		original
+
+NAME:		A85.O85
+NB1:		A85
+NB2:		O85
+POT:		observation
+
+# Read depth 86
+NAME:		G.A86
+NB1:		G
+NB2:		A86
+POT:		original
+
+NAME:		A86.O86
+NB1:		A86
+NB2:		O86
+POT:		observation
+
+# Read depth 87
+NAME:		G.A87
+NB1:		G
+NB2:		A87
+POT:		original
+
+NAME:		A87.O87
+NB1:		A87
+NB2:		O87
+POT:		observation
+
+# Read depth 88
+NAME:		G.A88
+NB1:		G
+NB2:		A88
+POT:		original
+
+NAME:		A88.O88
+NB1:		A88
+NB2:		O88
+POT:		observation
+
+# Read depth 89
+NAME:		G.A89
+NB1:		G
+NB2:		A89
+POT:		original
+
+NAME:		A89.O89
+NB1:		A89
+NB2:		O89
+POT:		observation
+
+# Read depth 90
+NAME:		G.A90
+NB1:		G
+NB2:		A90
+POT:		original
+
+NAME:		A90.O90
+NB1:		A90
+NB2:		O90
+POT:		observation
+
+# Read depth 91
+NAME:		G.A91
+NB1:		G
+NB2:		A91
+POT:		original
+
+NAME:		A91.O91
+NB1:		A91
+NB2:		O91
+POT:		observation
+
+# Read depth 92
+NAME:		G.A92
+NB1:		G
+NB2:		A92
+POT:		original
+
+NAME:		A92.O92
+NB1:		A92
+NB2:		O92
+POT:		observation
+
+# Read depth 93
+NAME:		G.A93
+NB1:		G
+NB2:		A93
+POT:		original
+
+NAME:		A93.O93
+NB1:		A93
+NB2:		O93
+POT:		observation
+
+# Read depth 94
+NAME:		G.A94
+NB1:		G
+NB2:		A94
+POT:		original
+
+NAME:		A94.O94
+NB1:		A94
+NB2:		O94
+POT:		observation
+
+# Read depth 95
+NAME:		G.A95
+NB1:		G
+NB2:		A95
+POT:		original
+
+NAME:		A95.O95
+NB1:		A95
+NB2:		O95
+POT:		observation
+
+# Read depth 96
+NAME:		G.A96
+NB1:		G
+NB2:		A96
+POT:		original
+
+NAME:		A96.O96
+NB1:		A96
+NB2:		O96
+POT:		observation
+
+# Read depth 97
+NAME:		G.A97
+NB1:		G
+NB2:		A97
+POT:		original
+
+NAME:		A97.O97
+NB1:		A97
+NB2:		O97
+POT:		observation
+
+# Read depth 98
+NAME:		G.A98
+NB1:		G
+NB2:		A98
+POT:		original
+
+NAME:		A98.O98
+NB1:		A98
+NB2:		O98
+POT:		observation
+
+# Read depth 99
+NAME:		G.A99
+NB1:		G
+NB2:		A99
+POT:		original
+
+NAME:		A99.O99
+NB1:		A99
+NB2:		O99
+POT:		observation
+
+# Read depth 100
+NAME:		G.A100
+NB1:		G
+NB2:		A100
+POT:		original
+
+NAME:		A100.O100
+NB1:		A100
+NB2:		O100
+POT:		observation
+
+# Read depth 101
+NAME:		G.A101
+NB1:		G
+NB2:		A101
+POT:		original
+
+NAME:		A101.O101
+NB1:		A101
+NB2:		O101
+POT:		observation
+
+# Read depth 102
+NAME:		G.A102
+NB1:		G
+NB2:		A102
+POT:		original
+
+NAME:		A102.O102
+NB1:		A102
+NB2:		O102
+POT:		observation
+
+# Read depth 103
+NAME:		G.A103
+NB1:		G
+NB2:		A103
+POT:		original
+
+NAME:		A103.O103
+NB1:		A103
+NB2:		O103
+POT:		observation
+
+# Read depth 104
+NAME:		G.A104
+NB1:		G
+NB2:		A104
+POT:		original
+
+NAME:		A104.O104
+NB1:		A104
+NB2:		O104
+POT:		observation
+
+# Read depth 105
+NAME:		G.A105
+NB1:		G
+NB2:		A105
+POT:		original
+
+NAME:		A105.O105
+NB1:		A105
+NB2:		O105
+POT:		observation
+
+# Read depth 106
+NAME:		G.A106
+NB1:		G
+NB2:		A106
+POT:		original
+
+NAME:		A106.O106
+NB1:		A106
+NB2:		O106
+POT:		observation
+
+# Read depth 107
+NAME:		G.A107
+NB1:		G
+NB2:		A107
+POT:		original
+
+NAME:		A107.O107
+NB1:		A107
+NB2:		O107
+POT:		observation
+
+# Read depth 108
+NAME:		G.A108
+NB1:		G
+NB2:		A108
+POT:		original
+
+NAME:		A108.O108
+NB1:		A108
+NB2:		O108
+POT:		observation
+
+# Read depth 109
+NAME:		G.A109
+NB1:		G
+NB2:		A109
+POT:		original
+
+NAME:		A109.O109
+NB1:		A109
+NB2:		O109
+POT:		observation
+
+# Read depth 110
+NAME:		G.A110
+NB1:		G
+NB2:		A110
+POT:		original
+
+NAME:		A110.O110
+NB1:		A110
+NB2:		O110
+POT:		observation
+
+# Read depth 111
+NAME:		G.A111
+NB1:		G
+NB2:		A111
+POT:		original
+
+NAME:		A111.O111
+NB1:		A111
+NB2:		O111
+POT:		observation
+
+# Read depth 112
+NAME:		G.A112
+NB1:		G
+NB2:		A112
+POT:		original
+
+NAME:		A112.O112
+NB1:		A112
+NB2:		O112
+POT:		observation
+
+# Read depth 113
+NAME:		G.A113
+NB1:		G
+NB2:		A113
+POT:		original
+
+NAME:		A113.O113
+NB1:		A113
+NB2:		O113
+POT:		observation
+
+# Read depth 114
+NAME:		G.A114
+NB1:		G
+NB2:		A114
+POT:		original
+
+NAME:		A114.O114
+NB1:		A114
+NB2:		O114
+POT:		observation
+
+# Read depth 115
+NAME:		G.A115
+NB1:		G
+NB2:		A115
+POT:		original
+
+NAME:		A115.O115
+NB1:		A115
+NB2:		O115
+POT:		observation
+
+# Read depth 116
+NAME:		G.A116
+NB1:		G
+NB2:		A116
+POT:		original
+
+NAME:		A116.O116
+NB1:		A116
+NB2:		O116
+POT:		observation
+
+# Read depth 117
+NAME:		G.A117
+NB1:		G
+NB2:		A117
+POT:		original
+
+NAME:		A117.O117
+NB1:		A117
+NB2:		O117
+POT:		observation
+
+# Read depth 118
+NAME:		G.A118
+NB1:		G
+NB2:		A118
+POT:		original
+
+NAME:		A118.O118
+NB1:		A118
+NB2:		O118
+POT:		observation
+
+# Read depth 119
+NAME:		G.A119
+NB1:		G
+NB2:		A119
+POT:		original
+
+NAME:		A119.O119
+NB1:		A119
+NB2:		O119
+POT:		observation
+
+# Read depth 120
+NAME:		G.A120
+NB1:		G
+NB2:		A120
+POT:		original
+
+NAME:		A120.O120
+NB1:		A120
+NB2:		O120
+POT:		observation
+
+# Read depth 121
+NAME:		G.A121
+NB1:		G
+NB2:		A121
+POT:		original
+
+NAME:		A121.O121
+NB1:		A121
+NB2:		O121
+POT:		observation
+
+# Read depth 122
+NAME:		G.A122
+NB1:		G
+NB2:		A122
+POT:		original
+
+NAME:		A122.O122
+NB1:		A122
+NB2:		O122
+POT:		observation
+
+# Read depth 123
+NAME:		G.A123
+NB1:		G
+NB2:		A123
+POT:		original
+
+NAME:		A123.O123
+NB1:		A123
+NB2:		O123
+POT:		observation
+
+# Read depth 124
+NAME:		G.A124
+NB1:		G
+NB2:		A124
+POT:		original
+
+NAME:		A124.O124
+NB1:		A124
+NB2:		O124
+POT:		observation
+
+# Read depth 125
+NAME:		G.A125
+NB1:		G
+NB2:		A125
+POT:		original
+
+NAME:		A125.O125
+NB1:		A125
+NB2:		O125
+POT:		observation
+
+# Read depth 126
+NAME:		G.A126
+NB1:		G
+NB2:		A126
+POT:		original
+
+NAME:		A126.O126
+NB1:		A126
+NB2:		O126
+POT:		observation
+
+# Read depth 127
+NAME:		G.A127
+NB1:		G
+NB2:		A127
+POT:		original
+
+NAME:		A127.O127
+NB1:		A127
+NB2:		O127
+POT:		observation
+
+# Read depth 128
+NAME:		G.A128
+NB1:		G
+NB2:		A128
+POT:		original
+
+NAME:		A128.O128
+NB1:		A128
+NB2:		O128
+POT:		observation
+
+# Read depth 129
+NAME:		G.A129
+NB1:		G
+NB2:		A129
+POT:		original
+
+NAME:		A129.O129
+NB1:		A129
+NB2:		O129
+POT:		observation
+
+# Read depth 130
+NAME:		G.A130
+NB1:		G
+NB2:		A130
+POT:		original
+
+NAME:		A130.O130
+NB1:		A130
+NB2:		O130
+POT:		observation
+
+# Read depth 131
+NAME:		G.A131
+NB1:		G
+NB2:		A131
+POT:		original
+
+NAME:		A131.O131
+NB1:		A131
+NB2:		O131
+POT:		observation
+
+# Read depth 132
+NAME:		G.A132
+NB1:		G
+NB2:		A132
+POT:		original
+
+NAME:		A132.O132
+NB1:		A132
+NB2:		O132
+POT:		observation
+
+# Read depth 133
+NAME:		G.A133
+NB1:		G
+NB2:		A133
+POT:		original
+
+NAME:		A133.O133
+NB1:		A133
+NB2:		O133
+POT:		observation
+
+# Read depth 134
+NAME:		G.A134
+NB1:		G
+NB2:		A134
+POT:		original
+
+NAME:		A134.O134
+NB1:		A134
+NB2:		O134
+POT:		observation
+
+# Read depth 135
+NAME:		G.A135
+NB1:		G
+NB2:		A135
+POT:		original
+
+NAME:		A135.O135
+NB1:		A135
+NB2:		O135
+POT:		observation
+
+# Read depth 136
+NAME:		G.A136
+NB1:		G
+NB2:		A136
+POT:		original
+
+NAME:		A136.O136
+NB1:		A136
+NB2:		O136
+POT:		observation
+
+# Read depth 137
+NAME:		G.A137
+NB1:		G
+NB2:		A137
+POT:		original
+
+NAME:		A137.O137
+NB1:		A137
+NB2:		O137
+POT:		observation
+
+# Read depth 138
+NAME:		G.A138
+NB1:		G
+NB2:		A138
+POT:		original
+
+NAME:		A138.O138
+NB1:		A138
+NB2:		O138
+POT:		observation
+
+# Read depth 139
+NAME:		G.A139
+NB1:		G
+NB2:		A139
+POT:		original
+
+NAME:		A139.O139
+NB1:		A139
+NB2:		O139
+POT:		observation
+
+# Read depth 140
+NAME:		G.A140
+NB1:		G
+NB2:		A140
+POT:		original
+
+NAME:		A140.O140
+NB1:		A140
+NB2:		O140
+POT:		observation
+
+# Read depth 141
+NAME:		G.A141
+NB1:		G
+NB2:		A141
+POT:		original
+
+NAME:		A141.O141
+NB1:		A141
+NB2:		O141
+POT:		observation
+
+# Read depth 142
+NAME:		G.A142
+NB1:		G
+NB2:		A142
+POT:		original
+
+NAME:		A142.O142
+NB1:		A142
+NB2:		O142
+POT:		observation
+
+# Read depth 143
+NAME:		G.A143
+NB1:		G
+NB2:		A143
+POT:		original
+
+NAME:		A143.O143
+NB1:		A143
+NB2:		O143
+POT:		observation
+
+# Read depth 144
+NAME:		G.A144
+NB1:		G
+NB2:		A144
+POT:		original
+
+NAME:		A144.O144
+NB1:		A144
+NB2:		O144
+POT:		observation
+
+# Read depth 145
+NAME:		G.A145
+NB1:		G
+NB2:		A145
+POT:		original
+
+NAME:		A145.O145
+NB1:		A145
+NB2:		O145
+POT:		observation
+
+# Read depth 146
+NAME:		G.A146
+NB1:		G
+NB2:		A146
+POT:		original
+
+NAME:		A146.O146
+NB1:		A146
+NB2:		O146
+POT:		observation
+
+# Read depth 147
+NAME:		G.A147
+NB1:		G
+NB2:		A147
+POT:		original
+
+NAME:		A147.O147
+NB1:		A147
+NB2:		O147
+POT:		observation
+
+# Read depth 148
+NAME:		G.A148
+NB1:		G
+NB2:		A148
+POT:		original
+
+NAME:		A148.O148
+NB1:		A148
+NB2:		O148
+POT:		observation
+
+# Read depth 149
+NAME:		G.A149
+NB1:		G
+NB2:		A149
+POT:		original
+
+NAME:		A149.O149
+NB1:		A149
+NB2:		O149
+POT:		observation
+
+# Read depth 150
+NAME:		G.A150
+NB1:		G
+NB2:		A150
+POT:		original
+
+NAME:		A150.O150
+NB1:		A150
+NB2:		O150
+POT:		observation
+
+# Read depth 151
+NAME:		G.A151
+NB1:		G
+NB2:		A151
+POT:		original
+
+NAME:		A151.O151
+NB1:		A151
+NB2:		O151
+POT:		observation
+
+# Read depth 152
+NAME:		G.A152
+NB1:		G
+NB2:		A152
+POT:		original
+
+NAME:		A152.O152
+NB1:		A152
+NB2:		O152
+POT:		observation
+
+# Read depth 153
+NAME:		G.A153
+NB1:		G
+NB2:		A153
+POT:		original
+
+NAME:		A153.O153
+NB1:		A153
+NB2:		O153
+POT:		observation
+
+# Read depth 154
+NAME:		G.A154
+NB1:		G
+NB2:		A154
+POT:		original
+
+NAME:		A154.O154
+NB1:		A154
+NB2:		O154
+POT:		observation
+
+# Read depth 155
+NAME:		G.A155
+NB1:		G
+NB2:		A155
+POT:		original
+
+NAME:		A155.O155
+NB1:		A155
+NB2:		O155
+POT:		observation
+
+# Read depth 156
+NAME:		G.A156
+NB1:		G
+NB2:		A156
+POT:		original
+
+NAME:		A156.O156
+NB1:		A156
+NB2:		O156
+POT:		observation
+
+# Read depth 157
+NAME:		G.A157
+NB1:		G
+NB2:		A157
+POT:		original
+
+NAME:		A157.O157
+NB1:		A157
+NB2:		O157
+POT:		observation
+
+# Read depth 158
+NAME:		G.A158
+NB1:		G
+NB2:		A158
+POT:		original
+
+NAME:		A158.O158
+NB1:		A158
+NB2:		O158
+POT:		observation
+
+# Read depth 159
+NAME:		G.A159
+NB1:		G
+NB2:		A159
+POT:		original
+
+NAME:		A159.O159
+NB1:		A159
+NB2:		O159
+POT:		observation
+
+# Read depth 160
+NAME:		G.A160
+NB1:		G
+NB2:		A160
+POT:		original
+
+NAME:		A160.O160
+NB1:		A160
+NB2:		O160
+POT:		observation
+
+# Read depth 161
+NAME:		G.A161
+NB1:		G
+NB2:		A161
+POT:		original
+
+NAME:		A161.O161
+NB1:		A161
+NB2:		O161
+POT:		observation
+
+# Read depth 162
+NAME:		G.A162
+NB1:		G
+NB2:		A162
+POT:		original
+
+NAME:		A162.O162
+NB1:		A162
+NB2:		O162
+POT:		observation
+
+# Read depth 163
+NAME:		G.A163
+NB1:		G
+NB2:		A163
+POT:		original
+
+NAME:		A163.O163
+NB1:		A163
+NB2:		O163
+POT:		observation
+
+# Read depth 164
+NAME:		G.A164
+NB1:		G
+NB2:		A164
+POT:		original
+
+NAME:		A164.O164
+NB1:		A164
+NB2:		O164
+POT:		observation
+
+# Read depth 165
+NAME:		G.A165
+NB1:		G
+NB2:		A165
+POT:		original
+
+NAME:		A165.O165
+NB1:		A165
+NB2:		O165
+POT:		observation
+
+# Read depth 166
+NAME:		G.A166
+NB1:		G
+NB2:		A166
+POT:		original
+
+NAME:		A166.O166
+NB1:		A166
+NB2:		O166
+POT:		observation
+
+# Read depth 167
+NAME:		G.A167
+NB1:		G
+NB2:		A167
+POT:		original
+
+NAME:		A167.O167
+NB1:		A167
+NB2:		O167
+POT:		observation
+
+# Read depth 168
+NAME:		G.A168
+NB1:		G
+NB2:		A168
+POT:		original
+
+NAME:		A168.O168
+NB1:		A168
+NB2:		O168
+POT:		observation
+
+# Read depth 169
+NAME:		G.A169
+NB1:		G
+NB2:		A169
+POT:		original
+
+NAME:		A169.O169
+NB1:		A169
+NB2:		O169
+POT:		observation
+
+# Read depth 170
+NAME:		G.A170
+NB1:		G
+NB2:		A170
+POT:		original
+
+NAME:		A170.O170
+NB1:		A170
+NB2:		O170
+POT:		observation
+
+# Read depth 171
+NAME:		G.A171
+NB1:		G
+NB2:		A171
+POT:		original
+
+NAME:		A171.O171
+NB1:		A171
+NB2:		O171
+POT:		observation
+
+# Read depth 172
+NAME:		G.A172
+NB1:		G
+NB2:		A172
+POT:		original
+
+NAME:		A172.O172
+NB1:		A172
+NB2:		O172
+POT:		observation
+
+# Read depth 173
+NAME:		G.A173
+NB1:		G
+NB2:		A173
+POT:		original
+
+NAME:		A173.O173
+NB1:		A173
+NB2:		O173
+POT:		observation
+
+# Read depth 174
+NAME:		G.A174
+NB1:		G
+NB2:		A174
+POT:		original
+
+NAME:		A174.O174
+NB1:		A174
+NB2:		O174
+POT:		observation
+
+# Read depth 175
+NAME:		G.A175
+NB1:		G
+NB2:		A175
+POT:		original
+
+NAME:		A175.O175
+NB1:		A175
+NB2:		O175
+POT:		observation
+
+# Read depth 176
+NAME:		G.A176
+NB1:		G
+NB2:		A176
+POT:		original
+
+NAME:		A176.O176
+NB1:		A176
+NB2:		O176
+POT:		observation
+
+# Read depth 177
+NAME:		G.A177
+NB1:		G
+NB2:		A177
+POT:		original
+
+NAME:		A177.O177
+NB1:		A177
+NB2:		O177
+POT:		observation
+
+# Read depth 178
+NAME:		G.A178
+NB1:		G
+NB2:		A178
+POT:		original
+
+NAME:		A178.O178
+NB1:		A178
+NB2:		O178
+POT:		observation
+
+# Read depth 179
+NAME:		G.A179
+NB1:		G
+NB2:		A179
+POT:		original
+
+NAME:		A179.O179
+NB1:		A179
+NB2:		O179
+POT:		observation
+
+# Read depth 180
+NAME:		G.A180
+NB1:		G
+NB2:		A180
+POT:		original
+
+NAME:		A180.O180
+NB1:		A180
+NB2:		O180
+POT:		observation
+
+# Read depth 181
+NAME:		G.A181
+NB1:		G
+NB2:		A181
+POT:		original
+
+NAME:		A181.O181
+NB1:		A181
+NB2:		O181
+POT:		observation
+
+# Read depth 182
+NAME:		G.A182
+NB1:		G
+NB2:		A182
+POT:		original
+
+NAME:		A182.O182
+NB1:		A182
+NB2:		O182
+POT:		observation
+
+# Read depth 183
+NAME:		G.A183
+NB1:		G
+NB2:		A183
+POT:		original
+
+NAME:		A183.O183
+NB1:		A183
+NB2:		O183
+POT:		observation
+
+# Read depth 184
+NAME:		G.A184
+NB1:		G
+NB2:		A184
+POT:		original
+
+NAME:		A184.O184
+NB1:		A184
+NB2:		O184
+POT:		observation
+
+# Read depth 185
+NAME:		G.A185
+NB1:		G
+NB2:		A185
+POT:		original
+
+NAME:		A185.O185
+NB1:		A185
+NB2:		O185
+POT:		observation
+
+# Read depth 186
+NAME:		G.A186
+NB1:		G
+NB2:		A186
+POT:		original
+
+NAME:		A186.O186
+NB1:		A186
+NB2:		O186
+POT:		observation
+
+# Read depth 187
+NAME:		G.A187
+NB1:		G
+NB2:		A187
+POT:		original
+
+NAME:		A187.O187
+NB1:		A187
+NB2:		O187
+POT:		observation
+
+# Read depth 188
+NAME:		G.A188
+NB1:		G
+NB2:		A188
+POT:		original
+
+NAME:		A188.O188
+NB1:		A188
+NB2:		O188
+POT:		observation
+
+# Read depth 189
+NAME:		G.A189
+NB1:		G
+NB2:		A189
+POT:		original
+
+NAME:		A189.O189
+NB1:		A189
+NB2:		O189
+POT:		observation
+
+# Read depth 190
+NAME:		G.A190
+NB1:		G
+NB2:		A190
+POT:		original
+
+NAME:		A190.O190
+NB1:		A190
+NB2:		O190
+POT:		observation
+
+# Read depth 191
+NAME:		G.A191
+NB1:		G
+NB2:		A191
+POT:		original
+
+NAME:		A191.O191
+NB1:		A191
+NB2:		O191
+POT:		observation
+
+# Read depth 192
+NAME:		G.A192
+NB1:		G
+NB2:		A192
+POT:		original
+
+NAME:		A192.O192
+NB1:		A192
+NB2:		O192
+POT:		observation
+
+# Read depth 193
+NAME:		G.A193
+NB1:		G
+NB2:		A193
+POT:		original
+
+NAME:		A193.O193
+NB1:		A193
+NB2:		O193
+POT:		observation
+

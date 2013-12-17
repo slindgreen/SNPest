@@ -1,0 +1,203 @@
+#include "phy/ObservationsIO.h"
+
+namespace phy {
+
+  // convert string with space separated symbols into vector of strings
+  vector<symbol_t> symStrToSymVec(string const & symStr)
+  {
+    return split( strip(symStr) );
+  }
+
+  // convert string with semicolon separated meta-symbols into map of meta-symbol to vector of symbols
+  boost::unordered_map<symbol_t, vector<symbol_t> > metaSymStrToMetaSymMap(string const & metaSymStr)
+  {
+    boost::unordered_map<symbol_t, vector<symbol_t> > metaSymMap;
+    vector<string> metaSymSpecs = split( strip(metaSymStr, "; \t"), ";");
+    BOOST_FOREACH(string const & s, metaSymSpecs) {
+      vector<string> v = split(s, "=");
+      assert(v.size() == 2);
+      metaSymMap[ strip(v[0]) ] = symStrToSymVec( v[1] );
+    }
+    return metaSymMap;
+  }
+
+
+  StateMap stateMapDispatcher(string const & name)
+  {
+    StateMap sm(""); // dummy StateMap
+    if (name == "nuc")
+      sm = mkNucStateMap();
+    else if (name == "metaNuc")
+      sm =  mkMetaNucStateMap();
+    else {
+      errorAbort("No StateMap named :'" + name + "'."); 
+    }
+    return sm;
+  }
+
+
+  istream & operator>>(istream & str, StateMap & staMap)
+  {
+    skipWhiteSpaceAndComments(str);
+
+    unsigned mult = 1; // multiplicity
+    string name;
+    string tag;
+    str >> tag;
+
+    if (tag == "ALPHABET_NAME:") {  // use pre-defined state map
+      str >> name;
+
+      unsigned mult = 1;
+      if ( isdigit(name[0]) ) {  // if numeric then assume n-name form, where n gives the multiplicity and name names a basic StateMap
+	vector<string> v = split(name, "-");
+	assert(v.size() == 2);
+	fromString(v[0], mult);
+	name = v[1];
+      }
+      
+      staMap = stateMapDispatcher(name);
+
+      // use multiplicity
+      assert(mult > 0 and mult <= 4); // limit on possible sizes of n 
+      if (mult > 1)
+	staMap = StateMap(staMap, mult);
+    }
+
+    else if (tag == "NAME:") {  // state map definition follows
+      str >> name;
+      skipWhiteSpaceAndComments(str);
+
+      string symbols;
+      string metaSymbols;
+      while ( moreTags(str) ) {
+	str >> tag;
+	if (tag == "SYMBOLS:")
+	  getline(str, symbols);
+	else if (tag == "META_SYMBOLS:")
+	  getline(str, metaSymbols);
+	else if (tag == "MULTIPLICITY:") {
+	  str >> mult;
+	  skipLine(str); // skip rest of line
+	}
+	else
+	  errorAbort("Unknown tag ('" + tag + "') in state map specification with name '" + name + "'.");
+      }
+      // check
+      if (symbols.size() == 0)
+	errorAbort("Missing symbol string in state map spscification with name  '" + name + "'.");
+	
+      staMap = StateMap(symStrToSymVec(symbols), metaSymStrToMetaSymMap(metaSymbols), name);
+      
+      // use multiplicity
+      assert(mult > 0 and mult <= 4); // limit on possible sizes of n 
+      if (mult > 1)
+	staMap = StateMap(staMap, mult, name);
+    }
+
+    else
+      errorAbort("Unknown initial tag '" + tag + "' used in state map specification");
+
+    return str;
+  }
+
+
+  ostream & operator<<(ostream & str, StateMap const & staMap)
+  {
+    if (staMap.name().size() == 0) // no defined name
+      errorAbort("Currently only named StateMaps can be output");
+    str << "ALPHABET_NAME:\t" << staMap.name() << endl;
+    return str;
+  }
+
+
+  void writeStateMap2(ostream & str, StateMap const & staMap)
+  {
+    if (staMap.name().size() == 0) // no defined name
+      errorAbort("From writeStateMap2: Only state maps with names can be output");
+
+    //statemap separator
+    str << endl;
+
+    // name
+    str << "NAME:\t" << staMap.name() << endl;
+
+    // symbols
+    unsigned stateCount = staMap.stateCount();
+    str << "SYMBOLS:\t";
+    for (unsigned i = 0; i < stateCount; i++)
+      str << " " << staMap.state2Symbol(i);
+    str << endl;
+
+    // meta symbols
+    unsigned metaStateCount = staMap.metaStateCount();
+    str << "META_SYMBOLS:\t";
+    for (unsigned i = stateCount; i < metaStateCount; i++) {
+      vector<symbol_t> degVec = staMap.degeneracyVector( staMap.state2Symbol(i) );
+      str << " " << staMap.state2Symbol(i) << " =";
+      BOOST_FOREACH(string const & s, degVec)
+	str << " " << s;
+      str << ";";
+    }
+    str << endl;
+  }
+
+
+  map<string, StateMapPtr_t> readStateMapFile(string const & file)
+  {
+    ifstream f;
+    openInFile(f, file);
+    return readStateMapFile(f);
+  }
+
+
+  map<string, StateMapPtr_t> readStateMapFile(istream & str)
+  {
+    map<string, StateMapPtr_t> smMap;
+    skipWhiteSpaceAndComments(str);
+    while ( str.good() ) {
+      StateMapPtr_t smPtr(new StateMap("") );
+      str >> *smPtr;
+      smMap[ smPtr->name() ] = smPtr;
+
+      skipWhiteSpaceAndComments(str);
+    }
+    return smMap;
+  }
+
+
+  void writeStateMapFile(string const & file, map<string, StateMapPtr_t> const & smMap)
+  {
+    ofstream f( file.c_str() );
+    writeStateMapFile(f, smMap);
+  }
+
+
+  void writeStateMapFile(ostream & str, map<string, StateMapPtr_t> const & smMap)
+  {
+    for (map<string, StateMapPtr_t>::const_iterator iter = smMap.begin();
+	 iter != smMap.end();
+	 iter++) {
+      str << *(iter->second);
+      str << endl;
+    }
+  }
+
+
+  void writeStateMapFile2(string const & file, map<string, StateMapPtr_t> const & smMap)
+  {
+    ofstream f( file.c_str() );
+    writeStateMapFile2(f, smMap);
+  }
+
+
+  void writeStateMapFile2(ostream & str, map<string, StateMapPtr_t> const & smMap)
+  {
+    for (map<string, StateMapPtr_t>::const_iterator iter = smMap.begin();
+	 iter != smMap.end();
+	 iter++)
+      writeStateMap2(str, *(iter->second) );
+  }
+
+
+} // end namespace phy
