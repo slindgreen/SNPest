@@ -115,7 +115,7 @@ if($REFERENCEFILE ne ""){
 
 # The VCF header. Update information as appropriate.
 # We only use a subset of the fields, but this might be extended in time.
-my $vcfheader="##fileformat=VCFv4.2\n##fileDate=".$DATE."\n##source=".$VERSION.$REFERENCEFILE."##model=".$model."\n##maxDepth=".$maxdepth."\n##INFO=<ID=DP,Number=1,Type=Integer,Description=\"Total Depth\">\n##INFO=<ID=PP,Number=1,Type=Float,Description=\"Posterior probability\">\n##INFO=<ID=AVMQ,Number=1,Type=Integer,Description=\"Average mapping quality\">\n#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\n";
+my $vcfheader="##fileformat=VCFv4.2\n##fileDate=".$DATE."\n##source=".$VERSION.$REFERENCEFILE."##model=".$model."\n##maxDepth=".$maxdepth."\n##INFO=<ID=DP,Number=1,Type=Integer,Description=\"Total Depth\">\n##INFO=<ID=PP,Number=1,Type=Float,Description=\"Posterior probability\">\n##INFO=<ID=AVMQ,Number=1,Type=Integer,Description=\"Average mapping quality\">\n##INFO=<ID=DEL,Number=1,Type=Integer,Description=\"Comma separated list of number of reads supporting deletion(s)\">\n##INFO=<ID=FRACDEL,Number=1,Type=Float,Description=\"Comma separated list of fraction of reads supporting deletion(s)\">\n##INFO=<ID=INS,Number=1,Type=Integer,Description=\"Comma separated list of number of reads supporting insertion(s)\">\n##INFO=<ID=FRACINS,Number=1,Type=Float,Description=\"Comma separated list of fraction of reads supporting insertion(s)\">\n#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\n";
 
 # Set the genotype number: Diploid=10 and haploid=4
 my $genotypenumber=10;
@@ -146,6 +146,13 @@ print STDERR "The program settings are:\nMax depth: ".$maxdepth."\nPloidity: ".$
 
 print STDOUT $vcfheader;
 
+my $hit;
+my @splitreads;
+my $insertion;
+my $MAXINSDEPTH;
+my $INSERTIONS;
+my $DELETIONS;
+
 while(<STDIN>){
     $counter++;
     chomp $_;
@@ -156,70 +163,132 @@ while(<STDIN>){
     # Clean up the read data
     #Remove ^ and the following char (do this first)
     #Remove $
-    #Remove [+-]N and the following N chars
+    #Remove -N and the following N chars
     #Since we only care about the forward strand, we can change all . and , to ref
-    #And we can complement the mismatches on the reverse strand to get the forward information
+    #NOTE: upper cas/lower case appears to only indicate strand - the letter is always on the forward strand.
+    #Thus, 'a' means a mismatch on the reverse strand resulting in 'A' on the forward strand.
+
+    # Insertions: Generate additional lines, flag positions as insertions, use reference N, use mapQ
+    # Deletions: Remove * and corresponding qualities, flag position as potential deletion
     $readdata =~ s/\^.//g;
     $readdata =~ s/\$//g;
-    $readdata =~ s/[.,*]/$ref/g;
-    $readdata =~ tr/[acgtn]/[TGCAN]/;
-    if($readdata =~ m/[0-9]/){
-	my @splitreads=split(/[+-]/,$readdata);
+    $readdata =~ s/[.,]/$ref/g;
+    if($readdata =~ m/-[0-9]/){
+	@splitreads=split(/-/,$readdata);
 	for($i=0;$i<@splitreads;$i++){
-	    if($splitreads[$i] =~ s/([0-9]+)//){
-		my $hit=$1;
+	    if($splitreads[$i] =~ s/^([0-9]+)//){
+		$hit=$1;
 		$splitreads[$i] =~ s/^[a-zA-Z]{$hit}//;
 	    }
 	}
 	$readdata=join('',@splitreads);
     }
+    $INSERTIONS=0;
+    $MAXINSDEPTH=0;
+    my @INSLIST;
+    if($readdata =~ m/\+[0-9]/){
+	@splitreads=split(/\+/,$readdata);
+	for($i=0;$i<@splitreads;$i++){
+	    if($splitreads[$i] =~ s/^([0-9]+)//){
+		$MAXINSDEPTH++;
+		$hit=$1;
+		$insertion=uc(substr($splitreads[$i] , 0 , $hit));
+		$INSERTIONS=($INSERTIONS < $hit) ? $hit : $INSERTIONS;
+		push(@INSLIST,$insertion);
+		$splitreads[$i] =~ s/^[a-zA-Z]{$hit}//;
+	    }
+	}
+	$readdata=join('',@splitreads);
+    }
+    #$readdata =~ tr/[acgtn]/[TGCAN]/;
+    $readdata = uc($readdata);
+
     if(length($readdata) != length($qualities)){
-	print STDERR $_."\nNot equal lengths:\n".$readdata."\n".$qualities."\n";
+	print STDERR $_."\nnot equal lengths:\n".$readdata."\n".$qualities."\n";
 	exit;
     }
-    
     my @nucs=split(//,$readdata);
     my @quals=split(//,$qualities);
     my @mapqs=split(//,$mappingquals);
 
-    #If the depth is less than or equal to $maxdepth, use all the data
-    #Otherwise, randomly sample $maxdepth reads with corresponding quality
-    #We do this by randomly shuffling the indices from 0 to $#nucs
-    #and using the first $maxdepth indices
-    my @indices=(0..$#nucs);
-    if($depth > $maxdepth){
-	#Shuffle and only use the first $maxdepth indices
-	@indices=shuffle(@indices);
-	$#indices=$maxdepth-1;
+    $DELETIONS=0;
+    for($i=0;$i<@nucs;$i++){
+	if($nucs[$i] eq '*'){
+	    $DELETIONS++;
+	    $depth--;
+	    $nucs[$i]=' ';
+	    $quals[$i]=' ';
+	    $mapqs[$i]=' ';
+	}
     }
 
-    # Use the minimum of mapping quality and nucleotide quality
-    # Truncate qualities at $maxqual
-    $avmapq=0;
-    $tabline="";
-    foreach $i (@indices){
-	$avmapq=$avmapq+ord($mapqs[$i])-$qualbase;
-	$qual=minimum(ord($quals[$i])-$qualbase,ord($mapqs[$i])-$qualbase,$maxqual);
-	$qual=($qual>0)?$qual:1;
-	$tabline=$tabline."\t".$nucs[$i].$qual;
+    if($DELETIONS>0){
+	@nucs = grep {$_ ne " "} @nucs;
+	@mapqs = grep {$_ ne " "} @mapqs;
+	@quals = grep {$_ ne " "} @quals;
     }
-    $avmapq=int($avmapq/($#indices+1)+0.5);
-    #Now, create a line in the tabfile for dfgeval
-    #Generate an ID containing all the info we need (id, pos, ref, average mapping quality and depth)
-    $firstfield=$id."_".$pos."_".$ref."_".$avmapq."_".$depth;
-    if($noref){
-	#Just use N
-	$ref="N";
+
+    if($depth>0){
+	#If the depth is less than or equal to $maxdepth, use all the data
+	#Otherwise, randomly sample $maxdepth reads with corresponding quality
+	#We do this by randomly shuffling the indices from 0 to $#nucs
+	#and using the first $maxdepth indices
+	my @indices=(0..$#nucs);
+	if($depth > $maxdepth){
+	    #Shuffle and only use the first $maxdepth indices
+	    @indices=shuffle(@indices);
+	    $#indices=$maxdepth-1;
+	}
+    
+	# Use the minimum of mapping quality and nucleotide quality
+	# Truncate qualities at $maxqual
+	$avmapq=0;
+	$tabline="";
+	foreach $i (@indices){
+	    $avmapq=$avmapq+ord($mapqs[$i])-$qualbase;
+	    $qual=minimum(ord($quals[$i])-$qualbase,ord($mapqs[$i])-$qualbase,$maxqual);
+	    $qual=($qual>0)?$qual:1;
+	    $tabline=$tabline."\t".$nucs[$i].$qual;
+	}
+	$avmapq=int($avmapq/($#indices+1)+0.5);
+	#Now, create a line in the tabfile for dfgeval
+	#Generate an ID containing all the info we need (id, pos, ref, average mapping quality and depth)
+	$firstfield=$id."_".$pos."_".$ref."_".$avmapq."_".$depth;
+	if($DELETIONS>0){
+	    $firstfield=$firstfield.";DEL=".$DELETIONS.";FRACDEL=".($DELETIONS/($DELETIONS+$depth));
+	}
+	if($noref){
+	    #Just use N
+	    $ref="N";
+	}
+	$tabline=$firstfield."\t".$ref.$tabline;
     }
-    $tabline=$firstfield."\t".$ref.$tabline;
+    else{
+	# In case whole position is deleted: Mark and call with N
+	$tabline=$id."_".$pos."_".$ref."_".$qualbase."_1;DEL=".$DELETIONS.";FRACDEL=1.0\tN\tN".$qualbase;
+    }
     print TABFILE $tabline."\n";
+    
+    for($i=0;$i<$INSERTIONS;$i++){
+	$firstfield=$id."_".$pos."_N_".$avmapq;
+	$depth=0;
+	$tabline="";
+	for(my $j=0;$j<$MAXINSDEPTH && $depth<$maxdepth;$j++){
+            $qual=($avmapq>$maxqual)?$maxqual:$avmapq;
+            if(length($INSLIST[$j])>$i){
+                $depth++;
+                $tabline=$tabline."\t".substr($INSLIST[$j],$i,1).$qual;
+            }
+	}
+	$tabline=$firstfield."_".(($depth==$maxdepth)?$MAXINSDEPTH:$depth).";INS=".(($depth==$maxdepth)?$MAXINSDEPTH:$depth)."\tN".$tabline;
+	print TABFILE $tabline."\n";
+    }
 
     # Test if we have either read $batchsize lines and should process them before continuing, 
     # or if we have read the last line of the file and should process the last (potentially smaller) set of input
     if($counter==$batchsize || eof){
 	close(TABFILE);
 	# Call dfgeval with input file
-
 	$mycommand=$dfgpath."/dfgEval_new --ppVars=G --ppSumOther --ppFile=- --dfgSpecPrefix=".$dfgpath."/dfgspec/ --maxDepth=".$maxdepth." --ploidity=".$ploidity." --model=".$model." ".$tabfilename." > ".$genotypefilename;
 	print STDERR $mycommand."\n";
 	system $mycommand;
