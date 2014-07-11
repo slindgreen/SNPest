@@ -1,54 +1,0 @@
-
-grammarTrain.cpp,56
-vector<SeqData> readAlignments(15,315
-int main(24,446
-
-multinomial.cpp,173
-ublas::matrix<T> toRowMat(13,299
-ublas::matrix<T> toColMat(22,477
-void writeOutputHeader(31,634
-void writeOutput(48,1231
-void checkParameters(63,1767
-int main(75,2230
-
-dfgTrain.cpp,16
-int main(8,151
-
-dfgEval.cpp,317
-void takeMinusLog(7,122
-void ppSumOther(18,463
-void transformByOptions(31,677
-void checkIds(41,884
-void resetFactorPotential(49,1207
-vector< vector<string> > mkStateSymbolTable(63,1651
-void stateVecToSymbolVec(76,2066
-void mkVarAndStateSymbolList(88,2631
-void writePostProbLegend(116,3579
-int main(127,3973
-
-EvoFold.cpp,1047
-string const STR_BEGIN 19,479
-string const NON_STR_BEGIN 20,510
-struct PredRecord22,548
-  string id;PredRecord::id24,568
-  unsigned begin;PredRecord::begin25,608
-  unsigned end;PredRecord::end26,687
-  unsigned bpCount;PredRecord::bpCount27,764
-  ynumber_t cykProbStr;PredRecord::cykProbStr28,817
-  ynumber_t cykProbNoStr;PredRecord::cykProbNoStr29,887
-  ynumber_t insideProbStr;PredRecord::insideProbStr30,964
-  ynumber_t insideProbNoStr;PredRecord::insideProbNoStr31,1037
-  number_t cykScore;PredRecord::cykScore32,1113
-  number_t score;PredRecord::score33,1209
-  number_t strPostProb;PredRecord::strPostProb34,1293
-  string fold;PredRecord::fold35,1382
-  vector_t posScore;PredRecord::posScore36,1461
-vector<string> PredRecord::toStrVec(43,1729
-string PredRecord::toString(61,2394
-vector<SeqData> readAlignments(65,2523
-unsigned countBasePairs(73,2695
-void defineSubStructureIntervals(79,2819
-PredRecord mkStrPredRecord(98,3241
-void predStructure(125,4532
-void printPredRecordVec(160,5895
-int main(170,6277

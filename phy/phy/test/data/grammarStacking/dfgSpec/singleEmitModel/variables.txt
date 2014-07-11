@@ -1,4 +1,0 @@
-# Specification of variables' stateMap usage
-
-STATE_MAP_NAME: single	
-VAR_NAMES:	H 
