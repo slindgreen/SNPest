@@ -1,0 +1,20 @@
+NAME:		C.prior
+NB1:		C
+POT:		prior
+
+NAME:		C.G
+NB1:		C
+NB2:		G
+POT:		genotype
+
+# Read depth 1
+NAME:		G.A1
+NB1:		G
+NB2:		A1
+POT:		original
+
+NAME:		A1.O1
+NB1:		A1
+NB2:		O1
+POT:		observation
+

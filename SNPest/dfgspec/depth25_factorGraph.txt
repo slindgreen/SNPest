@@ -1,0 +1,284 @@
+NAME:		C.prior
+NB1:		C
+POT:		prior
+
+NAME:		C.G
+NB1:		C
+NB2:		G
+POT:		genotype
+
+# Read depth 1
+NAME:		G.A1
+NB1:		G
+NB2:		A1
+POT:		original
+
+NAME:		A1.O1
+NB1:		A1
+NB2:		O1
+POT:		observation
+
+# Read depth 2
+NAME:		G.A2
+NB1:		G
+NB2:		A2
+POT:		original
+
+NAME:		A2.O2
+NB1:		A2
+NB2:		O2
+POT:		observation
+
+# Read depth 3
+NAME:		G.A3
+NB1:		G
+NB2:		A3
+POT:		original
+
+NAME:		A3.O3
+NB1:		A3
+NB2:		O3
+POT:		observation
+
+# Read depth 4
+NAME:		G.A4
+NB1:		G
+NB2:		A4
+POT:		original
+
+NAME:		A4.O4
+NB1:		A4
+NB2:		O4
+POT:		observation
+
+# Read depth 5
+NAME:		G.A5
+NB1:		G
+NB2:		A5
+POT:		original
+
+NAME:		A5.O5
+NB1:		A5
+NB2:		O5
+POT:		observation
+
+# Read depth 6
+NAME:		G.A6
+NB1:		G
+NB2:		A6
+POT:		original
+
+NAME:		A6.O6
+NB1:		A6
+NB2:		O6
+POT:		observation
+
+# Read depth 7
+NAME:		G.A7
+NB1:		G
+NB2:		A7
+POT:		original
+
+NAME:		A7.O7
+NB1:		A7
+NB2:		O7
+POT:		observation
+
+# Read depth 8
+NAME:		G.A8
+NB1:		G
+NB2:		A8
+POT:		original
+
+NAME:		A8.O8
+NB1:		A8
+NB2:		O8
+POT:		observation
+
+# Read depth 9
+NAME:		G.A9
+NB1:		G
+NB2:		A9
+POT:		original
+
+NAME:		A9.O9
+NB1:		A9
+NB2:		O9
+POT:		observation
+
+# Read depth 10
+NAME:		G.A10
+NB1:		G
+NB2:		A10
+POT:		original
+
+NAME:		A10.O10
+NB1:		A10
+NB2:		O10
+POT:		observation
+
+# Read depth 11
+NAME:		G.A11
+NB1:		G
+NB2:		A11
+POT:		original
+
+NAME:		A11.O11
+NB1:		A11
+NB2:		O11
+POT:		observation
+
+# Read depth 12
+NAME:		G.A12
+NB1:		G
+NB2:		A12
+POT:		original
+
+NAME:		A12.O12
+NB1:		A12
+NB2:		O12
+POT:		observation
+
+# Read depth 13
+NAME:		G.A13
+NB1:		G
+NB2:		A13
+POT:		original
+
+NAME:		A13.O13
+NB1:		A13
+NB2:		O13
+POT:		observation
+
+# Read depth 14
+NAME:		G.A14
+NB1:		G
+NB2:		A14
+POT:		original
+
+NAME:		A14.O14
+NB1:		A14
+NB2:		O14
+POT:		observation
+
+# Read depth 15
+NAME:		G.A15
+NB1:		G
+NB2:		A15
+POT:		original
+
+NAME:		A15.O15
+NB1:		A15
+NB2:		O15
+POT:		observation
+
+# Read depth 16
+NAME:		G.A16
+NB1:		G
+NB2:		A16
+POT:		original
+
+NAME:		A16.O16
+NB1:		A16
+NB2:		O16
+POT:		observation
+
+# Read depth 17
+NAME:		G.A17
+NB1:		G
+NB2:		A17
+POT:		original
+
+NAME:		A17.O17
+NB1:		A17
+NB2:		O17
+POT:		observation
+
+# Read depth 18
+NAME:		G.A18
+NB1:		G
+NB2:		A18
+POT:		original
+
+NAME:		A18.O18
+NB1:		A18
+NB2:		O18
+POT:		observation
+
+# Read depth 19
+NAME:		G.A19
+NB1:		G
+NB2:		A19
+POT:		original
+
+NAME:		A19.O19
+NB1:		A19
+NB2:		O19
+POT:		observation
+
+# Read depth 20
+NAME:		G.A20
+NB1:		G
+NB2:		A20
+POT:		original
+
+NAME:		A20.O20
+NB1:		A20
+NB2:		O20
+POT:		observation
+
+# Read depth 21
+NAME:		G.A21
+NB1:		G
+NB2:		A21
+POT:		original
+
+NAME:		A21.O21
+NB1:		A21
+NB2:		O21
+POT:		observation
+
+# Read depth 22
+NAME:		G.A22
+NB1:		G
+NB2:		A22
+POT:		original
+
+NAME:		A22.O22
+NB1:		A22
+NB2:		O22
+POT:		observation
+
+# Read depth 23
+NAME:		G.A23
+NB1:		G
+NB2:		A23
+POT:		original
+
+NAME:		A23.O23
+NB1:		A23
+NB2:		O23
+POT:		observation
+
+# Read depth 24
+NAME:		G.A24
+NB1:		G
+NB2:		A24
+POT:		original
+
+NAME:		A24.O24
+NB1:		A24
+NB2:		O24
+POT:		observation
+
+# Read depth 25
+NAME:		G.A25
+NB1:		G
+NB2:		A25
+POT:		original
+
+NAME:		A25.O25
+NB1:		A25
+NB2:		O25
+POT:		observation
+
